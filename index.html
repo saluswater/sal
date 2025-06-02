@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo-drop2.png" type="image/png">
+    <title>Guía de Reposición de Sal - Salus Water Systems</title>
+    <meta name="description" content="Guía completa para la reposición de sal en los sistemas de tratamiento de agua de Salus Water Systems">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            background: linear-gradient(135deg, #2B8C96 0%, #1e6169 50%, #164950 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10%;
+            width: 40%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: skewX(-15deg);
+        }
+        
+        .logo-header {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            display: inline-block;
+            width: 120px;
+            height: auto;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .icon-wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .icon-glow {
+            position: absolute;
+            inset: -8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+        
+        .droplet-icon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .hero-tag {
+            color: #a7f3fa;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 3vw, 1.375rem);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            font-weight: 300;
+        }
+        
+        .hero-footer {
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem;
+        }
+        
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .tag {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tag-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+        
+        .tag-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Guide Header Section */
+        .guide-header {
+            padding: 2rem;
+            background: linear-gradient(to right, #eff6ff, #e0f2fe);
+            border-bottom: 1px solid #dbeafe;
+        }
+        
+        .guide-header h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e40af;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guide-header-subtitle {
+            color: #2563eb;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .guide-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #e0e7ff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guide-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-card-icon {
+            /* width: 24px; */ /* Let image dictate width */
+            /* height: 24px; */ /* Let image dictate height */
+            color: #3b82f6; /* Will be overridden by image */
+            flex-shrink: 0;
+            display: inline-flex; /* Align image nicely */
+            align-items: center;
+            justify-content: center;
+            height: 24px; /* Set height on container for alignment */
+        }
+        
+        .guide-card-icon img {
+            height: 100%; /* Fill the container height */
+            width: auto;   /* Maintain aspect ratio */
+            object-fit: contain;
+        }
+        
+        .guide-card h3 {
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 1.125rem;
+            line-height: 1.4;
+        }
+        
+        .guide-card ul {
+            list-style: none;
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+        
+        .guide-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guide-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        
+        .section-logo {
+            padding: 0.25rem 0.75rem;
+            background: #f3f4f6;
+            color: #374151;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        
+        .section-logo-img {
+            height: 32px;
+            width: auto;
+        }
+        
+        .section-detail-icon { /* New class for icons in section details */
+            height: 1em; /* Relative to font size */
+            width: auto;
+            vertical-align: middle;
+            margin-right: 0.3em;
+            object-fit: contain;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .toc ol {
+            list-style: decimal;
+            padding-left: 1.5rem;
+            line-height: 2;
+            color: #4b5563;
+        }
+        
+        .toc li {
+            font-weight: 500;
+        }
+        
+        /* Salt Options */
+        .salt-option {
+            margin-bottom: 2rem;
+        }
+        
+        .salt-image-placeholder {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: 0 auto 1rem;
+            background: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 1rem;
+            border: 2px dashed #e5e7eb;
+        }
+        
+        .salt-option h4 {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+        }
+        
+        .alternative-salts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .alt-salt-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #fafafa;
+        }
+        
+        .alt-salt-image {
+            width: 100%;
+            height: 200px;
+            background: #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .green-salt h4 {
+            color: #16a34a;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .yellow-salt h4 {
+            color: #ca8a04;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Important Note */
+        .important-note {
+            background: #eff6ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #dbeafe;
+            margin: 2rem 0;
+        }
+        
+        .important-note h3 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e40af;
+        }
+        
+        .important-note p {
+            color: #1d4ed8;
+            line-height: 1.6;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            background: linear-gradient(to right, #eff6ff, #e0f2fe);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+        }
+        
+        .faq-header {
+            background: #2563eb;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .faq-header h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .faq-header-icon { /* New class for FAQ header icon */
+            height: 24px; /* Specific size */
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .faq-content {
+            padding: 2rem;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #f0f9ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: #1d4ed8;
+        }
+        
+        .cta-icon { /* New class for CTA button icon */
+            height: 1em; /* Relative to font size */
+            width: auto;
+            vertical-align: middle;
+            margin-right: 0.3em;
+            object-fit: contain;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: #f9fafb;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-subtitle {
+            color: #4b5563;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card h4 {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+        }
+        
+        .contact-card p {
+            color: #2563eb;
+            font-weight: 500;
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .contact-card a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-card a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        
+        /* Tablet styles */
+        @media (max-width: 1024px) and (min-width: 641px) {
+            .container {
+                margin: 0 1rem;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+
+            .alternative-salts {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 640px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+                border-radius: 0; /* Remove border radius for full-width mobile */
+            }
+
+            .hero {
+                min-height: 450px; /* Adjusted for better fit */
+                border-radius: 0; /* Ensure hero also has no border radius */
+            }
+
+            .logo-header {
+                padding: 1rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem 1rem; /* Reduced padding slightly */
+            }
+            
+            .hero-title {
+                font-size: 1.6rem; /* Slightly increased for impact */
+                line-height: 1.25; /* Adjusted line height */
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem; /* Slightly adjusted for balance */
+                margin-bottom: 1.5rem; /* Added some bottom margin */
+            }
+
+            .hero-tags {
+                gap: 0.75rem; /* Reduced gap for tighter packing */
+                font-size: 0.75rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tag {
+                justify-content: center;
+            }
+            
+            .guide-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .guide-header {
+                padding: 1.5rem 1rem;
+                 border-radius: 0; /* Remove border radius */
+            }
+
+            .guide-header h2 {
+                font-size: 1.4rem; /* Adjusted for better hierarchy */
+            }
+            
+            .guide-card {
+                padding: 1.25rem 1rem; /* Adjusted padding */
+            }
+
+            .guide-card h3 {
+                font-size: 1.05rem; /* Slightly increased for readability */
+                line-height: 1.3;
+            }
+
+            .guide-card ul {
+                font-size: 0.85rem; /* Adjusted for readability */
+            }
+
+            .guide-card li {
+                margin-bottom: 0.4rem; /* Adjusted spacing */
+            }
+            
+            .alternative-salts {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section {
+                padding: 1.75rem 1rem; /* Adjusted padding */
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem; /* Reduced gap */
+                margin-bottom: 1.25rem; /* Adjusted margin */
+            }
+
+            .section-header h2 {
+                font-size: 1.4rem; /* Adjusted for better hierarchy */
+            }
+
+            .section-logo-img {
+                height: 26px; /* Slightly smaller logo */
+            }
+            
+            .toc {
+                padding: 1.25rem 1rem; /* Adjusted padding */
+            }
+
+            .toc ol {
+                line-height: 1.7; /* Adjusted line height */
+                font-size: 0.85rem; /* Adjusted font size */
+                padding-left: 1.2rem;
+            }
+
+            .salt-option h4,
+            .green-salt h4,
+            .yellow-salt h4 {
+                font-size: 1.05rem; /* Adjusted font size */
+            }
+
+            .important-note {
+                padding: 1.25rem 1rem; /* Adjusted padding */
+                font-size: 0.85rem; /* Adjusted font size */
+                margin: 1.25rem 0; /* Adjusted margin */
+            }
+            
+            .faq-header {
+                padding: 1rem; /* Adjusted padding */
+                gap: 0.5rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .faq-header h3 {
+                font-size: 1.2rem; /* Adjusted font size */
+                margin: 0;
+                line-height: 1.25;
+            }
+
+            .faq-content {
+                padding: 1.25rem 1rem; /* Adjusted padding */
+            }
+
+            .faq-item {
+                padding: 1rem; /* Adjusted padding */
+                margin-bottom: 0.75rem; /* Reduced margin */
+                border-radius: 6px; /* Slightly smaller radius */
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                margin-bottom: 0.5rem; /* Reduced margin */
+                line-height: 1.3;
+            }
+
+            .faq-answer {
+                font-size: 0.85rem; /* Adjusted font size */
+                line-height: 1.45; /* Adjusted line height */
+            }
+
+            .cta-section {
+                padding: 1.25rem 1rem; /* Adjusted padding */
+                text-align: center;
+            }
+            
+            .cta-title {
+                font-size: 1.05rem; /* Adjusted font size */
+                margin-bottom: 0.75rem; /* Adjusted margin */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+                flex-wrap: wrap;
+                line-height: 1.25;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 260px; /* Slightly reduced max-width */
+                margin: 0.75rem auto 0; /* Adjusted margin */
+                text-align: center;
+                word-wrap: break-word;
+                padding: 0.75rem 1rem; /* Adjusted padding */
+                font-size: 0.85rem; /* Adjusted font size */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.3rem;
+                min-height: 50px; /* Reduced min-height */
+                justify-content: center;
+                border-radius: 6px; /* Slightly smaller radius */
+            }
+
+            .contact-section {
+                padding: 2rem 1rem; /* Adjusted padding */
+            }
+
+            .contact-title {
+                font-size: 1.2rem; /* Adjusted font size */
+                flex-direction: column;
+                gap: 0.25rem; /* Reduced gap */
+                line-height: 1.25;
+            }
+            
+            .contact-subtitle {
+                font-size: 0.9rem; /* Adjusted font size */
+                margin-bottom: 1.5rem; /* Adjusted margin */
+                padding: 0 0.5rem;
+                line-height: 1.45;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem; /* Reduced gap */
+                max-width: 100%;
+            }
+
+            .contact-card {
+                padding: 1.5rem 1rem; /* Adjusted padding */
+                text-align: center;
+                min-height: 90px; /* Adjusted min-height */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 10px; /* Adjusted radius */
+            }
+            
+            .contact-card h4 {
+                font-size: 1.05rem; /* Adjusted font size */
+                margin-bottom: 0.5rem; /* Reduced margin */
+                line-height: 1.25;
+            }
+            
+            .contact-card p {
+                font-size: 0.9rem; /* Adjusted font size */
+                word-wrap: break-word;
+                line-height: 1.35;
+            }
+
+            /* Ensure images don't overflow */
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block; /* Ensure block display for better control */
+            }
+
+            /* Better text wrapping */
+            h1, h2, h3, h4, p, li { /* Added p and li for consistency */
+                word-wrap: break-word;
+                -webkit-hyphens: auto; /* Vendor prefix for Safari */
+                -ms-hyphens: auto; /* Vendor prefix for IE */
+                hyphens: auto;
+            }
+
+            /* Prevent horizontal scroll */
+            body {
+                overflow-x: hidden;
+            }
+
+            /* Better touch targets */
+            .cta-button,
+            .contact-card a { /* Applied to anchor within contact card for better specificity */
+                min-height: 44px;
+                display: flex; /* Ensure flex for centering if content is short */
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-card { /* Keep general contact card styling separate */
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+            }
+
+        }
+
+        /* Very small screens (iPhone SE, etc.) */
+        @media (max-width: 375px) {
+            .hero {
+                min-height: 400px;
+                 border-radius: 0;
+            }
+
+            .hero-title {
+                font-size: 1.35rem; /* Slightly increased for impact */
+            }
+            .hero-subtitle {
+                font-size: 0.85rem; /* Adjusted for balance */
+            }
+            .section-header h2 {
+                font-size: 1.25rem; /* Adjusted for hierarchy */
+            }
+            .guide-header h2 {
+                font-size: 1.2rem; /* Adjusted for hierarchy */
+            }
+
+            .guide-card {
+                padding: 0.75rem; /* Adjusted padding */
+            }
+
+            .section {
+                padding: 1.25rem 0.75rem; /* Adjusted padding */
+            }
+
+            .guide-header {
+                padding: 0.8rem 0.75rem; /* Adjusted padding */
+                 border-radius: 0;
+            }
+
+            .faq-content {
+                padding: 0.8rem 0.75rem; /* Adjusted padding */
+            }
+
+            .cta-section {
+                padding: 0.8rem 0.75rem; /* Adjusted padding */
+            }
+
+            .contact-section {
+                padding: 1.25rem 0.75rem; /* Adjusted padding */
+            }
+
+            /* Smaller logo on very small screens */
+            .logo-header img {
+                width: 180px !important; /* Slightly smaller logo */
+            }
+
+            .droplet-icon {
+                width: 55px; /* Slightly smaller icon */
+                height: 55px;
+            }
+
+            /* Ensure proper spacing for very small screens */
+            .hero-tags {
+                gap: 0.6rem; /* Adjusted gap */
+            }
+
+            .tag {
+                font-size: 0.65rem; /* Adjusted font size */
+            }
+
+            /* Better image sizing for salt options */
+            .salt-option img,
+            .alt-salt-card img {
+                max-height: 160px; /* Adjusted max height */
+                object-fit: contain;
+            }
+
+            /* Improve readability */
+            .guide-card ul {
+                font-size: 0.7rem; /* Adjusted font size */
+                line-height: 1.5; /* Adjusted line height */
+            }
+
+            .faq-answer {
+                font-size: 0.8rem; /* Adjusted font size */
+                line-height: 1.4; /* Adjusted line height */
+            }
+        }
+
+        /* Landscape orientation on small devices */
+        @media (max-width: 640px) and (orientation: landscape) {
+            .hero {
+                min-height: 320px; /* Adjusted for landscape */
+                 border-radius: 0;
+            }
+
+            .hero-content {
+                padding: 1.25rem 1rem; /* Adjusted padding */
+            }
+
+            .droplet-icon {
+                width: 50px; /* Smaller icon for landscape */
+                height: 50px;
+            }
+
+            /* Adjust hero tags for landscape */
+            .hero-tags {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        /* Additional responsive improvements */
+        @media (max-width: 640px) {
+            /* Improve image containers */
+            .salt-option img, /* Keep this if it's a parent class for the image */
+            .alt-salt-card img { /* Keep this if it's a parent class for the image */
+                width: 100%;
+                height: auto;
+                max-height: 220px; /* Adjusted max height */
+                object-fit: contain;
+                border-radius: 6px; /* Slightly smaller radius */
+            }
+            
+            /* Image specific styling if they are direct children */
+            img.salt-image, img.alt-salt-image-direct { /* Example if you add these classes directly to <img> */
+                 width: 100%;
+                 height: auto;
+                 max-height: 220px;
+                 object-fit: contain;
+                 border-radius: 6px;
+            }
+
+            /* Better spacing for lists */
+            ul {
+                margin: 0;
+                padding-left: 1.25rem; /* Slightly reduced padding */
+            }
+
+            /* Improve button accessibility */
+            .cta-button {
+                width: 100%;
+                max-width: 280px; /* Adjusted max width */
+                margin: 0.75rem auto 0; /* Adjusted margin */
+                text-align: center;
+                word-wrap: break-word;
+            }
+
+            /* Better table of contents on mobile */
+            .toc ol li {
+                margin-bottom: 0.4rem; /* Adjusted margin */
+                line-height: 1.5; /* Adjusted line height */
+            }
+
+            /* Improve section headers on mobile */
+            .section-header h2 {
+                margin: 0;
+                width: 100%;
+                font-size: 1.3rem; /* Ensure consistency with other h2 */
+            }
+
+            /* Better FAQ layout */
+            .faq-container {
+                margin: 0.75rem 0; /* Adjusted margin */
+                border-radius: 6px; /* Slightly smaller radius */
+            }
+
+            /* Improve contact cards */
+            .contact-card {
+                text-align: center;
+                min-height: 70px; /* Adjusted min-height */
+            }
+
+            .contact-card h4 {
+                margin-bottom: 0.4rem; /* Adjusted margin */
+                 font-size: 1rem; /* Ensure consistency */
+            }
+
+            /* Better link styling for mobile */
+            a {
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+
+            /* Ensure proper spacing between sections */
+            .section + .section {
+                border-top: 1px solid #eef2f7; /* Lighter separator */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="logo-header">
+                <img alt="Logo Salus" loading="lazy" width="200" height="80" style="width: 250px; height: auto;" src="logo-blue.png">
+            </div>
+            
+            <div class="hero-content">
+                <div class="icon-wrapper">
+                    <div class="icon-glow"></div>
+                    <img src="logo-drop.png" alt="Icono de Gota de Agua" class="droplet-icon">
+                </div>
+                
+                <div>
+                    <p class="hero-tag">GUÍA COMPLETA</p>
+                    <h1 class="hero-title">Reposición de Sal para su Sistema de Tratamiento de Agua</h1>
+                    <p class="hero-subtitle">Una guía paso a paso para mantener su sistema funcionando perfectamente</p>
+                </div>
+            </div>
+            
+            <div class="hero-footer">
+                <div class="hero-tags">
+                    <div class="tag">
+                        <span class="tag-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <span>Guía Oficial Salus</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <span>Mantenimiento Preventivo</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <span>Agua de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Guide Section -->
+        <div class="guide-header">
+            <h2>Guía de Reposición de Sal</h2>
+            <p class="guide-header-subtitle">Salus Water Systems – Florida, EE. UU.</p>
+            
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-card-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <h3>¿Cuándo reponer la sal?</h3>
+                    </div>
+                    <ul>
+                        <li>Revise el nivel al menos una vez al mes</li>
+                        <li>Reponga cuando la sal esté por debajo de la mitad del compartimento</li>
+                        <li>Nunca deje que el depósito se quede completamente sin sal</li>
+                        <li>Si puede ver el fondo del tanque de sal, es hora de rellenar</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-card-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <h3>¿Qué sal debo usar?</h3>
+                    </div>
+                    <ul>
+                        <li>Recomendado: Morton Professional Water Softener Crystals</li>
+                        <li>Sal granulada 100% natural con disolución controlada</li>
+                        <li>Dónde encontrar: Home Depot, Lowe's, Target</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-card-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <h3>¿Por qué es importante la sal?</h3>
+                    </div>
+                    <ul>
+                        <li>La sal no filtra el agua, sino que retrolava los minerales que sí lo hacen</li>
+                        <li>Estos minerales eliminan cloro, metales pesados e impurezas</li>
+                        <li>Sin sal, el sistema pierde eficiencia y la calidad del agua se degrada</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-card-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <h3>¿Cómo reponer?</h3>
+                    </div>
+                    <ul>
+                        <li>Abra la tapa del depósito de sal (junto al sistema externo)</li>
+                        <li>Verifique si el nivel está por debajo de la mitad</li>
+                        <li>Vierta 1 bolsa a la vez directamente en el depósito</li>
+                        <li>No es necesario lavar el compartimento previamente</li>
+                        <li>Llene hasta alcanzar aproximadamente ¾ de la capacidad del tanque</li>
+                        <li>Cierre bien la tapa después de rellenar</li>
+                        <li>Es normal que haya agua en el depósito</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-card-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <h3>Frecuencia Recomendada</h3>
+                    </div>
+                    <ul>
+                        <li>1 bolsa por mes</li>
+                        <li>O 2 bolsas cada 2 meses</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-card-icon"><img src="logo-drop.png" alt="icono"></span>
+                        <h3>¿Necesita ayuda?</h3>
+                    </div>
+                    <ul>
+                        <li>Correo electrónico: adm@usasalus.com</li>
+                        <li>Instagram: @saluswater</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Table of Contents -->
+        <div class="section">
+            <h2 style="margin-bottom: 1.5rem;">Índice de Contenidos</h2>
+            <div class="toc">
+                <ol>
+                    <li>Introducción</li>
+                    <li>Cuándo Reponer la Sal</li>
+                    <li>Elegir el Tipo Correcto de Sal</li>
+                    <li>Por Qué es Importante la Sal</li>
+                    <li>Cómo Reponer</li>
+                    <li>Frecuencia Recomendada</li>
+                    <li>Preguntas Frecuentes</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Section 1: Introduction -->
+        <div class="section">
+            <div class="section-header">
+                <h2>1. Introducción</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            <p>Mantener su sistema de tratamiento de agua funcionando correctamente es esencial para asegurar agua de calidad en su hogar. Esta guía le ayudará a entender cómo reponer la sal de manera eficiente y efectiva.</p>
+        </div>
+        
+        <!-- Section 2: When to Replenish Salt -->
+        <div class="section">
+            <div class="section-header">
+                <h2>2. Cuándo Reponer la Sal</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="color: #1d4ed8; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo-drop.png" alt="icono" class="section-detail-icon"> ¿Cuándo reponer la sal?
+                </h3>
+            </div>
+            <ul style="list-style: disc; padding-left: 2rem; line-height: 2;">
+                <li>Revise el nivel al menos una vez al mes.</li>
+                <li>La reposición debe hacerse siempre que la sal esté por debajo de la mitad del compartimento.</li>
+                <li>Nunca deje que el depósito se quede completamente sin sal.</li>
+                <li>Si puede ver el fondo del tanque de sal, ya es hora de rellenar.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 3: Choosing the Right Type of Salt -->
+        <div class="section">
+            <div class="section-header">
+                <h2>3. Elegir el Tipo Correcto de Sal</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="color: #1d4ed8; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo-drop.png" alt="icono" class="section-detail-icon"> ¿Qué sal debo usar?
+                </h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">Existen diferentes opciones de sal para su sistema de tratamiento de agua. La elección ideal depende de la disponibilidad en su región y de sus preferencias específicas.</p>
+            
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Opción Preferida:</h3>
+            <div class="salt-option">
+                <div class="relative aspect-video mb-3" style="max-width: 400px; margin: 0 auto 1rem;">
+                    <img alt="Cristales para Ablandador de Agua Morton Professional" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius: 8px; object-fit: contain;" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-16%20at%2014.02.38%20%281%29-yO5lceko6x1Qb8SnQRodjs5Y9gstdb.jpeg">
+                </div>
+                <h4>Cristales para Ablandador de Agua Morton Professional</h4>
+                <ul style="list-style: disc; padding-left: 2rem; line-height: 1.8;">
+                    <li>Sal 100% natural de alta pureza</li>
+                    <li>Disponible en bolsas de 50 lbs (22.6 kg)</li>
+                    <li>Formato en cristales para disolución eficiente</li>
+                    <li>Ideal para la mayoría de los sistemas de tratamiento de agua</li>
+                    <li>Dónde encontrar: Home Depot, Lowe's, Target</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin: 2rem 0 1rem;">Opciones Alternativas:</h3>
+            <p style="margin-bottom: 1.5rem;">Si no encuentra los Cristales para Ablandador de Agua Morton Professional, estas son excelentes alternativas:</p>
+            
+            <div class="alternative-salts">
+                <div class="alt-salt-card green-salt">
+                    <div class="relative aspect-[3/4]" style="height: 200px; margin-bottom: 1rem;">
+                        <img alt="Sal Verde (5-en-1) - Morton Clean and Protect" loading="lazy" decoding="async" style="width:100%; height:100%; border-radius: 6px; object-fit: contain;" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-01-13%20at%2014.43.59-Fwl8iK84ksgMRk8QLB9CNZZ2NHAlR8.jpeg">
+                    </div>
+                    <h4>Sal Verde (5-en-1):</h4>
+                    <ul style="list-style: disc; padding-left: 1.5rem; font-size: 0.875rem; line-height: 1.6;">
+                        <li>Mejora el sabor del agua</li>
+                        <li>Prolonga la vida de los electrodomésticos</li>
+                        <li>Reduce la acumulación de residuos</li>
+                        <li>Deja la piel y el cabello más suaves</li>
+                        <li>Facilita la limpieza</li>
+                    </ul>
+                </div>
+                
+                <div class="alt-salt-card yellow-salt">
+                    <div class="relative aspect-[3/4]" style="height: 200px; margin-bottom: 1rem;">
+                         <img alt="Sal Amarilla (4-en-1) - Morton Clean and Protect" loading="lazy" decoding="async" style="width:100%; height:100%; border-radius: 6px; object-fit: contain;" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-01-13%20at%2014.43.59%20(1)-doBG5kjHufXIfL1HKLdH55WcCkc7GT.jpeg">
+                    </div>
+                    <h4>Sal Amarilla (4-en-1):</h4>
+                    <ul style="list-style: disc; padding-left: 1.5rem; font-size: 0.875rem; line-height: 1.6;">
+                        <li>Prolonga la vida de los electrodomésticos</li>
+                        <li>Reduce la acumulación de residuos</li>
+                        <li>Deja la piel y el cabello más suaves</li>
+                        <li>Facilita la limpieza</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="important-note">
+                <h3>Importante:</h3>
+                <p>Independientemente de la opción elegida, asegúrese de que la sal sea específica para sistemas de tratamiento de agua y preferiblemente en formato de pellets o cristales para garantizar una disolución adecuada.</p>
+            </div>
+        </div>
+        
+        <!-- Section 4: Why Salt is Important -->
+        <div class="section">
+            <div class="section-header">
+                <h2>4. Por Qué es Importante la Sal</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="color: #1d4ed8; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo-drop.png" alt="icono" class="section-detail-icon"> ¿Por qué es importante la sal?
+                </h3>
+            </div>
+            <ul style="list-style: disc; padding-left: 2rem; line-height: 2;">
+                <li>La sal no filtra el agua. Se utiliza para retrolavar los minerales que realizan la purificación.</li>
+                <li>Estos minerales eliminan cloro, metales pesados e impurezas del agua.</li>
+                <li>Sin sal, el sistema pierde eficiencia y el agua vuelve a presentar dureza y contaminación.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 5: How to Replenish -->
+        <div class="section">
+            <div class="section-header">
+                <h2>5. Cómo Reponer</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="color: #1d4ed8; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo-drop.png" alt="icono" class="section-detail-icon"> ¿Cómo reponer?
+                </h3>
+            </div>
+            <ul style="list-style: disc; padding-left: 2rem; line-height: 2;">
+                <li>Abra la tapa del depósito de sal (ubicado junto al sistema externo).</li>
+                <li>Verifique si el nivel está por debajo de la mitad.</li>
+                <li>Vierta 1 bolsa a la vez directamente en el depósito.</li>
+                <li>No es necesario lavar el compartimento previamente.</li>
+                <li>Llene hasta alcanzar aproximadamente ¾ de la capacidad del tanque.</li>
+                <li>Cierre bien la tapa después de rellenar.</li>
+                <li>Es normal que haya agua en el depósito. La sal necesita estar sumergida para funcionar correctamente.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 6: Recommended Frequency -->
+        <div class="section">
+            <div class="section-header">
+                <h2>6. Frecuencia Recomendada</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <h3 style="color: #1d4ed8; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo-drop.png" alt="icono" class="section-detail-icon"> Frecuencia Recomendada
+                </h3>
+            </div>
+            <ul style="list-style: disc; padding-left: 2rem; line-height: 2;">
+                <li>1 bolsa por mes.</li>
+                <li>O 2 bolsas cada 2 meses.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 7: FAQ -->
+        <div class="section">
+            <div class="section-header">
+                <h2>7. Preguntas Frecuentes (FAQ)</h2>
+                <img alt="Logo Salus" loading="lazy" width="100" height="40" class="section-logo-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%5BSalus%5D%20Black-XOSL4ZmWq1XlyxZnvSRewzZU1jb38B.png">
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-header">
+                    <img src="logo-drop.png" alt="Icono de FAQ" class="faq-header-icon" style="margin-right: 10px;">
+                    <h3>Preguntas Frecuentes</h3>
+                </div>
+                
+                <div class="faq-content">
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puedo usar cualquier tipo de sal en mi sistema?</div>
+                        <div class="faq-answer">No. Es importante usar solo sal específica para sistemas de tratamiento de agua, como las recomendadas en esta guía. La sal de mesa u otros tipos pueden dañar su sistema.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Es normal que haya agua en el depósito de sal?</div>
+                        <div class="faq-answer">Sí, es completamente normal. La sal necesita estar parcialmente sumergida en agua para crear la salmuera necesaria para el proceso de regeneración de los minerales.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué sucede si olvido reponer la sal?</div>
+                        <div class="faq-answer">Si la sal se agota por completo, el sistema no podrá regenerar los minerales de filtración. Esto resultará en agua dura y posibles contaminantes volviendo a circular en su hogar.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cuál es la diferencia entre los tipos de sal?</div>
+                        <div class="faq-answer">La principal diferencia radica en los aditivos y beneficios. La sal verde (5-en-1) ofrece un beneficio adicional de mejorar el sabor del agua, mientras que la sal amarilla (4-en-1) y la sal azul (Profesional) tienen diferentes niveles de pureza y disolución.</div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h4 class="cta-title"><img src="logo-drop.png" alt="icono" class="cta-icon"> Acceda a las Preguntas Frecuentes Completas</h4>
+                    <p style="color: #4b5563;">Para obtener información más detallada y respuestas a otras preguntas comunes, acceda a nuestro documento completo de Preguntas Frecuentes:</p>
+                    <a href="FAQ - Guía de Reposición de Sal - Salus Water Filtration Systems.pdf" target="_blank" rel="noopener noreferrer" class="cta-button">
+                        <img src="logo-drop.png" alt="icono" class="cta-icon">
+                        <span>Descargar FAQ Completo (PDF)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3 class="contact-title"><img src="logo-drop.png" alt="icono" class="section-detail-icon"> ¿Necesita más ayuda?</h3>
+            <p class="contact-subtitle">Nuestro equipo siempre está disponible para ayudar con cualquier pregunta sobre su sistema de tratamiento de agua.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Contacto por Correo Electrónico</h4>
+                    <p>adm@usasalus.com</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Síganos en Instagram</h4>
+                    <p><a href="https://www.instagram.com/salus.water" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">@salus.water</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
